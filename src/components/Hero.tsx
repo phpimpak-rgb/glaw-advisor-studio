@@ -133,7 +133,7 @@ export const Hero = () => {
               {/* signature plate */}
               <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl glass px-4 py-3 text-navy">
                 <div>
-                  <p className="font-display text-lg leading-none">Klao</p>
+                  <p className="font-display text-lg leading-none">Glaw</p>
                   <p className="mt-1 text-[11px] tracking-wider text-navy/60">AIA · FINANCIAL ADVISOR</p>
                 </div>
                 <span className="flex h-9 items-center gap-1.5 rounded-full bg-navy px-3 text-[11px] text-cloud">
