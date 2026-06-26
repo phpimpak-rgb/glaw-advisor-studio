@@ -38,7 +38,7 @@ export const Services = () => {
               <span className="h-px w-8 bg-gold" /> บริการ
             </span>
             <h2 className="mt-4 text-4xl font-semibold leading-tight text-navy md:text-5xl">
-              บริการที่ GLAW <span className="text-gold">ดูแล</span>
+              บริการที่เกล้า<span className="text-gold">ดูแล</span>
             </h2>
           </div>
           <p className="max-w-md text-base leading-relaxed text-navy/65">

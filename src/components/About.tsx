@@ -16,13 +16,13 @@ export const About = () => {
           <div className="relative overflow-hidden rounded-[2rem] shadow-portrait">
             <img
               src={portraitAsset.url}
-              alt="GLAW พิมพ์พักตร์ ภัทรกิจไพศาล ตัวแทนและที่ปรึกษาการเงิน AIA"
+              alt="เกล้า พิมพ์พักตร์ ภัทรกิจไพศาล ตัวแทนและที่ปรึกษาการเงิน AIA"
               className="aspect-[4/5] w-full object-cover"
               loading="lazy"
             />
           </div>
           <div className="absolute -bottom-6 -right-4 hidden rounded-2xl bg-navy px-6 py-5 text-cloud shadow-soft md:block">
-            <p className="font-semibold">GLAW</p>
+            <p className="font-semibold">เกล้า · Klao</p>
             <p className="mt-1 text-xs tracking-wider text-cloud/70">AIA FINANCIAL ADVISOR</p>
           </div>
         </motion.div>
@@ -38,10 +38,10 @@ export const About = () => {
             <span className="h-px w-8 bg-gold" /> โปรไฟล์
           </span>
           <h2 className="mt-4 text-4xl font-semibold leading-tight text-navy md:text-5xl">
-            GLAW คือ<span className="text-gold">ใคร</span>
+            เกล้าคือ<span className="text-gold">ใคร</span>
           </h2>
           <p className="mt-6 text-base leading-relaxed text-navy/70 md:text-lg">
-            GLAW ไม่อยากให้คนจำว่าเป็นแค่ตัวแทนประกัน แต่อยากให้จำว่าเป็นคนที่ใส่ใจ
+            เกล้าไม่อยากให้คนจำว่าเป็นแค่ตัวแทนประกัน แต่อยากให้จำว่าเป็นคนที่ใส่ใจ
             ไม่ทิ้ง ไม่หาย และพร้อมให้คำปรึกษาได้ทั้งในวันที่ทุกอย่างปกติ
             หรือวันที่มีเรื่องไม่คาดคิดเกี่ยวกับประกันและการวางแผนการเงิน
           </p>
