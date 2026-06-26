@@ -12,7 +12,7 @@ const fadeUp = (delay = 0) => ({
 const floatingLabels = [
   { text: "วางแผนความเสี่ยง", className: "top-[8%] -left-4 md:-left-10" },
   { text: "ประกันสุขภาพ", className: "top-[44%] -right-2 md:-right-8" },
-  { text: "ที่ปรึกษาส่วนตัว", className: "bottom-[10%] left-4 md:left-2" },
+  { text: "ที่ปรึกษาส่วนตัว", className: "bottom-[12%] -right-3 md:-right-10" },
 ];
 
 export const Hero = () => {
@@ -54,12 +54,6 @@ export const Hero = () => {
             เข้าใจทุกมุมมอง ใส่ใจทุกความกังวล พร้อมให้คำปรึกษาทุกเรื่องด้านประกัน
           </motion.p>
 
-          <motion.p
-            {...fadeUp(0.5)}
-            className="mt-5 max-w-xl text-[15px] leading-relaxed text-navy/65 md:text-base"
-          >
-            เข้าใจทุกมุมมอง ใส่ใจทุกความกังวล พร้อมให้คำปรึกษาทุกเรื่องด้านประกัน
-          </motion.p>
 
 
           <motion.div {...fadeUp(0.65)} className="mt-10 flex flex-wrap items-center gap-3">
