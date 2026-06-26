@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
-import portraitAsset from "@/assets/klao-portrait.png.asset.json";
+import heroPortraitAsset from "@/assets/klao-hero.png.asset.json";
 import { CloudScene } from "./CloudScene";
 import { contact } from "@/config/contact";
 
