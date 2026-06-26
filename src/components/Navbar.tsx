@@ -6,6 +6,7 @@ const links = [
   { label: "หน้าแรก", href: "#home" },
   { label: "บริการ", href: "#services" },
   { label: "โปรไฟล์", href: "#about" },
+  { label: "ขั้นตอน", href: "#process" },
   { label: "ติดต่อ", href: "#contact" },
 ];
 
