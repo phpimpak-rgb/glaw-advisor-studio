@@ -69,7 +69,7 @@ export const Hero = () => {
               rel="noreferrer"
               className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-navy px-7 py-4 text-sm text-cloud shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-[0_30px_60px_-20px_hsl(var(--navy)/0.5)] md:text-base"
             >
-              <span className="relative z-10">คุยกับเกล้าทาง LINE</span>
+              <span className="relative z-10">คุยกับ GLAW ทาง LINE</span>
               <span
                 aria-hidden
                 className="relative z-10 flex h-7 w-7 items-center justify-center rounded-full bg-gold/90 text-navy transition-transform group-hover:translate-x-1"
@@ -86,7 +86,7 @@ export const Hero = () => {
               href={`tel:${contact.phone}`}
               className="inline-flex items-center gap-2 rounded-full border border-navy/15 bg-cloud/70 px-6 py-4 text-sm text-navy backdrop-blur transition hover:border-gold hover:bg-cloud md:text-base"
             >
-              <span className="text-gold">☏</span> โทรหาเกล้า
+              <span className="text-gold">☏</span> โทรหา GLAW
             </a>
           </motion.div>
 
@@ -127,7 +127,7 @@ export const Hero = () => {
             >
             <img
               src={heroPortraitAsset.url}
-              alt="เกล้า ที่ปรึกษาการเงินและประกันจาก AIA"
+              alt="GLAW ที่ปรึกษาการเงินและประกันจาก AIA"
               width={896}
               height={1152}
               fetchPriority="high"
@@ -139,7 +139,7 @@ export const Hero = () => {
               {/* signature plate */}
               <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl glass px-4 py-3 text-navy">
                 <div>
-                  <p className="font-display text-lg leading-none">Klao</p>
+                  <p className="font-display text-lg leading-none">GLAW</p>
                   <p className="mt-1 text-[11px] tracking-wider text-navy/60">AIA · FINANCIAL ADVISOR</p>
                 </div>
                 <span className="flex h-9 items-center gap-1.5 rounded-full bg-navy px-3 text-[11px] text-cloud">

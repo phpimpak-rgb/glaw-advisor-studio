@@ -41,7 +41,7 @@ export const Navbar = () => {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10 md:py-5">
         <a href="#home" className="text-xl font-bold tracking-[0.25em] text-navy">
-          KLAO
+          GLAW
           <span className="ml-1.5 inline-block h-1.5 w-1.5 -translate-y-1 rounded-full bg-gold align-middle" />
         </a>
 
