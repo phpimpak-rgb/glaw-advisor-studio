@@ -39,7 +39,7 @@ export const Hero = () => {
             {...fadeUp(0.25)}
             className="mt-8 font-display text-[2.5rem] font-semibold leading-[1.1] tracking-tight text-navy md:text-6xl lg:text-[4.25rem]"
           >
-            หากไม่มีแผนการเงิน
+            หากคุณไม่มีแผนการเงิน
             <br />
             เงินทุกก้อนที่หามาได้
             <br />
