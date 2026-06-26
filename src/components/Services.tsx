@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 
 const services = [
   {
@@ -14,7 +15,7 @@ const services = [
   {
     no: "03",
     title: "วางแผนออมเงิน เกษียณ และควบการลงทุน",
-    desc: "ช่วยดูทางเลือกสำหรับเป้าหมายระยะยาว เช่น การออม การเกษียณ และแบบประกันชีวิตควบการลงทุน โดยอธิบายทั้งโอกาส ข้อจำกัด และความเสี่ยงก่อนตัดสินใจ",
+    desc: "ช่วยดูทางเลือกสำหรับเป้าหมายระยะยาว เช่น การออม การเกษียณ และแบบประกันชีวิตควบการลงทุน",
   },
   {
     no: "04",
@@ -27,6 +28,9 @@ const services = [
     desc: "ช่วยฟังปัญหา ดูภาพรวม เปรียบเทียบทางเลือก และดูแลต่อเนื่องหลังการทำประกัน ไม่ทิ้ง ไม่หาย",
   },
 ];
+
+const cardBase =
+  "group relative overflow-hidden rounded-3xl p-8 md:p-10 transition-all duration-500";
 
 export const Services = () => {
   return (
@@ -47,23 +51,105 @@ export const Services = () => {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-5 md:grid-cols-2">
-          {services.map((s, i) => (
-            <motion.article
-              key={s.no}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.7, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative overflow-hidden rounded-3xl border border-navy/10 bg-white/70 p-8 backdrop-blur transition-all hover:-translate-y-1 hover:border-gold/50 hover:shadow-soft md:p-10"
-            >
-              <div className="flex items-start justify-between">
-                <span className="text-sm font-medium tracking-widest text-gold">{s.no}</span>
-              </div>
-              <h3 className="mt-6 text-2xl font-semibold text-navy md:text-[26px]">{s.title}</h3>
-              <p className="mt-3 text-[15px] leading-relaxed text-navy/65">{s.desc}</p>
-            </motion.article>
-          ))}
+        <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-12 md:gap-6">
+          {services.map((s, i) => {
+            const isFeatured = i === 1;
+            const isWide = i === 3 || i === 4;
+            const isStandout = i === 4;
+
+            return (
+              <motion.article
+                key={s.no}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{
+                  duration: 0.7,
+                  delay: i * 0.07,
+                  ease: [0.22, 1, 0.36, 1] as const,
+                }}
+                className={[
+                  cardBase,
+                  isFeatured
+                    ? "md:col-span-6 lg:col-span-4 bg-navy text-cloud shadow-2xl md:-translate-y-4 hover:-translate-y-5"
+                    : isStandout
+                    ? "md:col-span-12 lg:col-span-6 border-2 border-gold/20 bg-cream/70 hover:border-gold/60 hover:shadow-soft"
+                    : isWide
+                    ? "md:col-span-12 lg:col-span-6 border border-navy/10 bg-white/70 backdrop-blur hover:border-gold/40 hover:shadow-soft"
+                    : "md:col-span-6 lg:col-span-4 border border-navy/10 bg-white/70 backdrop-blur hover:border-gold/40 hover:shadow-soft",
+                ].join(" ")}
+              >
+                {isFeatured && (
+                  <div className="absolute bottom-0 left-0 h-1 w-full bg-gold" />
+                )}
+                {isStandout && (
+                  <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-gold/10 blur-3xl" />
+                )}
+
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="flex items-start justify-between">
+                    <span
+                      className={[
+                        "text-4xl font-light transition-colors duration-500",
+                        isFeatured
+                          ? "text-gold/30 group-hover:text-gold/60"
+                          : isStandout
+                          ? "text-gold"
+                          : "text-navy/10 group-hover:text-gold/60",
+                      ].join(" ")}
+                    >
+                      {s.no}
+                    </span>
+                    {isStandout ? (
+                      <span className="rounded-full bg-gold px-3 py-1.5 text-[11px] font-medium uppercase tracking-wider text-cloud">
+                        Recommended
+                      </span>
+                    ) : (
+                      <div
+                        className={[
+                          "flex h-11 w-11 items-center justify-center rounded-full border transition-all duration-300",
+                          isFeatured
+                            ? "border-gold bg-gold text-navy group-hover:rotate-45"
+                            : "border-navy/15 text-navy/50 group-hover:border-gold group-hover:bg-gold group-hover:text-white",
+                        ].join(" ")}
+                      >
+                        <ArrowUpRight className="h-5 w-5" />
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="mt-10 flex flex-col flex-grow">
+                    <h3
+                      className={[
+                        "text-2xl font-semibold leading-snug md:text-[26px]",
+                        isFeatured ? "text-cloud" : "text-navy",
+                      ].join(" ")}
+                    >
+                      {s.title}
+                    </h3>
+                    <p
+                      className={[
+                        "mt-4 text-[15px] leading-relaxed",
+                        isFeatured ? "text-cloud/70" : "text-navy/65",
+                      ].join(" ")}
+                    >
+                      {s.desc}
+                    </p>
+
+                    {isStandout && (
+                      <a
+                        href="#contact"
+                        className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-navy px-6 py-3.5 text-sm font-medium text-cloud transition-all hover:scale-105 hover:shadow-soft"
+                      >
+                        ปรึกษาฟรี
+                        <ArrowUpRight className="h-4 w-4" />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </motion.article>
+            );
+          })}
         </div>
       </div>
     </section>
