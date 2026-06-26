@@ -13,7 +13,25 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ["Cormorant Garamond", "IBM Plex Sans Thai", "serif"],
+        sans: ["IBM Plex Sans Thai", "ui-sans-serif", "system-ui", "sans-serif"],
+      },
       colors: {
+        cloud: "hsl(var(--cloud))",
+        cream: "hsl(var(--cream))",
+        beige: {
+          DEFAULT: "hsl(var(--beige))",
+          deep: "hsl(var(--beige-deep))",
+        },
+        navy: {
+          DEFAULT: "hsl(var(--navy))",
+          soft: "hsl(var(--navy-soft))",
+        },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          soft: "hsl(var(--gold-soft))",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
