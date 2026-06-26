@@ -1,10 +1,13 @@
-// Central contact configuration — update these to point at Klao's real channels.
+// Central contact configuration — Klao (Pimpak Phattharakitpaisan)
 export const contact = {
-  lineUrl: "https://line.me/ti/p/~klao",
-  lineId: "@klao",
-  phone: "+66812345678",
-  phoneDisplay: "081 234 5678",
-  email: "klao.advisor@aia.co.th",
-  facebook: "https://facebook.com/klao.advisor",
-  instagram: "https://instagram.com/klao.advisor",
+  lineId: "hgglaw",
+  lineUrl: "https://line.me/ti/p/~hgglaw",
+  phone: "+66971616592",
+  phoneDisplay: "+66(0)97-161-6592",
+  email: "ph.pimpak@gmail.com",
+  licenseNo: "703712",
+  fullNameEn: "Pimpak Phattharakitpaisan",
+  fullNameTh: "พิมพ์พักตร์ ภัทรกิจไพศาล",
+  nickname: "เกล้า",
+  role: "ตัวแทนและที่ปรึกษาการเงิน AIA",
 };

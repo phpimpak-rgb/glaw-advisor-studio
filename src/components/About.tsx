@@ -1,17 +1,6 @@
 import { motion } from "framer-motion";
 import portraitAsset from "@/assets/klao-portrait.png.asset.json";
-
-const stats = [
-  { value: "5+", label: "ปีในวงการประกัน" },
-  { value: "200+", label: "ลูกค้าที่ดูแล" },
-  { value: "AIA", label: "ตัวแทนทางการ" },
-];
-
-const values = [
-  { title: "เข้าใจ", desc: "ฟังก่อนเสมอ เข้าใจเป้าหมายและความกังวลของคุณ" },
-  { title: "ใส่ใจ", desc: "ออกแบบแผนเฉพาะคุณ ไม่ใช่แผนสำเร็จรูป" },
-  { title: "ไม่ทิ้ง", desc: "อยู่เคียงข้างตลอดสัญญา ทั้งวันสุข และวันที่ต้องเคลม" },
-];
+import { contact } from "@/config/contact";
 
 export const About = () => {
   return (
@@ -27,7 +16,7 @@ export const About = () => {
           <div className="relative overflow-hidden rounded-[2rem] shadow-portrait">
             <img
               src={portraitAsset.url}
-              alt="เกล้า ที่ปรึกษาการเงินและประกันจาก AIA"
+              alt="เกล้า พิมพ์พักตร์ ภัทรกิจไพศาล ตัวแทนและที่ปรึกษาการเงิน AIA"
               className="aspect-[4/5] w-full object-cover"
               loading="lazy"
             />
@@ -49,36 +38,26 @@ export const About = () => {
             <span className="h-px w-8 bg-gold" /> โปรไฟล์
           </span>
           <h2 className="mt-4 text-4xl font-semibold leading-tight text-navy md:text-5xl">
-            ที่ปรึกษาที่อยู่กับคุณ
-            <br />
-            <span className="text-gold">ในทุกบทของชีวิต</span>
+            เกล้าคือ<span className="text-gold">ใคร</span>
           </h2>
           <p className="mt-6 text-base leading-relaxed text-navy/70 md:text-lg">
-            เกล้าเชื่อว่าประกันไม่ใช่เรื่องของสัญญา แต่คือเครื่องมือที่ช่วยให้คุณใช้ชีวิตได้อย่างมั่นใจ
-            ด้วยประสบการณ์การดูแลลูกค้าหลากหลายช่วงชีวิต ตั้งแต่วัยเริ่มทำงาน วางแผนครอบครัว ไปจนถึงวางแผนเกษียณ
+            เกล้าไม่อยากให้คนจำว่าเป็นแค่ตัวแทนประกัน แต่อยากให้จำว่าเป็นคนที่ใส่ใจ
+            ไม่ทิ้ง ไม่หาย และพร้อมให้คำปรึกษาได้ทั้งในวันที่ทุกอย่างปกติ
+            หรือวันที่มีเรื่องไม่คาดคิดเกี่ยวกับประกันและการวางแผนการเงิน
           </p>
 
-          <div className="mt-10 grid grid-cols-3 gap-4 border-y border-navy/10 py-6">
-            {stats.map((s) => (
-              <div key={s.label}>
-                <p className="text-3xl font-semibold text-navy md:text-4xl">{s.value}</p>
-                <p className="mt-1 text-xs text-navy/60 md:text-sm">{s.label}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 space-y-5">
-            {values.map((v, i) => (
-              <div key={v.title} className="flex gap-4">
-                <span className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gold/15 text-xs font-semibold text-gold">
-                  0{i + 1}
-                </span>
-                <div>
-                  <h3 className="font-semibold text-navy">{v.title}</h3>
-                  <p className="mt-1 text-sm text-navy/65">{v.desc}</p>
-                </div>
-              </div>
-            ))}
+          <div className="mt-10 rounded-3xl border border-navy/10 bg-white/60 p-7 backdrop-blur">
+            <p className="text-xs uppercase tracking-[0.25em] text-navy/50">Profile</p>
+            <p className="mt-3 text-2xl font-semibold text-navy">{contact.fullNameEn}</p>
+            <p className="mt-1 text-lg text-navy/80">{contact.fullNameTh}</p>
+            <p className="mt-1 text-sm text-navy/60">ชื่อเล่น {contact.nickname}</p>
+            <div className="mt-5 space-y-1.5 border-t border-navy/10 pt-5 text-sm text-navy/75">
+              <p>{contact.role}</p>
+              <p>
+                ใบอนุญาตตัวแทนประกันชีวิตเลขที่:{" "}
+                <span className="font-semibold text-navy">{contact.licenseNo}</span>
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>

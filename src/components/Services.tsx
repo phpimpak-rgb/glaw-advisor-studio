@@ -3,27 +3,28 @@ import { motion } from "framer-motion";
 const services = [
   {
     no: "01",
-    title: "วางแผนความเสี่ยง",
-    desc: "ออกแบบเกราะป้องกันชีวิตและทรัพย์สิน ให้แผนการเงินของคุณไม่สะดุดเมื่อเกิดเรื่องไม่คาดฝัน",
-    points: ["ประกันชีวิต", "ประกันอุบัติเหตุ", "ประกันโรคร้ายแรง"],
+    title: "วางแผนประกันสุขภาพ",
+    desc: "ช่วยดูแนวทางความคุ้มครองด้านค่ารักษาพยาบาล ชดเชยรายได้ และโรคร้ายแรง เพื่อให้เหมาะกับช่วงชีวิตและภาระที่ต้องดูแล",
   },
   {
     no: "02",
-    title: "ประกันสุขภาพ",
-    desc: "เลือกแผนสุขภาพที่เหมาะกับไลฟ์สไตล์และงบประมาณ ครอบคลุมทั้ง OPD, IPD และโรคเฉพาะทาง",
-    points: ["เหมาจ่าย", "ค่ารักษาพยาบาล", "ดูแลครอบครัว"],
+    title: "วางแผนประกันชีวิตและอุบัติเหตุ",
+    desc: "ช่วยวางหลักประกันให้ตัวเอง ครอบครัว หรือคนที่ต้องพึ่งพารายได้ของคุณ หากเกิดเหตุไม่คาดคิด",
   },
   {
     no: "03",
-    title: "วางแผนเกษียณ & ลงทุน",
-    desc: "วางเป้าหมายระยะยาว สร้างความมั่งคั่งและกระแสเงินสดที่ยั่งยืนผ่านยูนิตลิงค์และประกันบำนาญ",
-    points: ["Unit Linked", "ประกันบำนาญ", "ลดหย่อนภาษี"],
+    title: "วางแผนออมเงิน เกษียณ และควบการลงทุน",
+    desc: "ช่วยดูทางเลือกสำหรับเป้าหมายระยะยาว เช่น การออม การเกษียณ และแบบประกันชีวิตควบการลงทุน โดยอธิบายทั้งโอกาส ข้อจำกัด และความเสี่ยงก่อนตัดสินใจ",
   },
   {
     no: "04",
-    title: "ที่ปรึกษาส่วนตัว",
-    desc: "ทบทวนพอร์ตประกันและการเงินเป็นรอบ ๆ พร้อมอยู่เคียงข้างเมื่อคุณต้องเคลม ไม่ทิ้ง ไม่หาย",
-    points: ["รีวิวประจำปี", "บริการเคลม", "ดูแลตลอดสัญญา"],
+    title: "ดูแลเจ้าของธุรกิจ ผู้บริหาร และองค์กร",
+    desc: "ช่วยให้เจ้าของธุรกิจและผู้บริหารมองเห็นความเสี่ยงที่เกี่ยวข้องกับตัวเอง ครอบครัว พนักงาน และสวัสดิการองค์กร",
+  },
+  {
+    no: "05",
+    title: "ที่ปรึกษาส่วนตัวด้านประกัน",
+    desc: "ช่วยฟังปัญหา ดูภาพรวม เปรียบเทียบทางเลือก และดูแลต่อเนื่องหลังการทำประกัน ไม่ทิ้ง ไม่หาย",
   },
 ];
 
@@ -37,14 +38,12 @@ export const Services = () => {
               <span className="h-px w-8 bg-gold" /> บริการ
             </span>
             <h2 className="mt-4 text-4xl font-semibold leading-tight text-navy md:text-5xl">
-              ดูแลทุกด้านของการเงิน
-              <br />
-              <span className="text-gold">ในที่เดียว</span>
+              บริการที่เกล้า<span className="text-gold">ดูแล</span>
             </h2>
           </div>
           <p className="max-w-md text-base leading-relaxed text-navy/65">
-            ไม่ใช่แค่ขายประกัน แต่ออกแบบแผนการเงินที่เหมาะกับชีวิตคุณ
-            พร้อมเป็นที่ปรึกษาระยะยาวที่คุณวางใจได้
+            ให้คำแนะนำเบื้องต้นและดูแลเกี่ยวกับแบบประกันและบริการของ AIA
+            ครอบคลุมหลายหมวดตามความต้องการ เป้าหมาย และเงื่อนไขของแต่ละบุคคล
           </p>
         </div>
 
@@ -55,7 +54,7 @@ export const Services = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.7, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.7, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] }}
               className="group relative overflow-hidden rounded-3xl border border-navy/10 bg-white/70 p-8 backdrop-blur transition-all hover:-translate-y-1 hover:border-gold/50 hover:shadow-soft md:p-10"
             >
               <div className="flex items-start justify-between">
@@ -67,18 +66,8 @@ export const Services = () => {
                   →
                 </span>
               </div>
-              <h3 className="mt-6 text-2xl font-semibold text-navy md:text-3xl">{s.title}</h3>
+              <h3 className="mt-6 text-2xl font-semibold text-navy md:text-[26px]">{s.title}</h3>
               <p className="mt-3 text-[15px] leading-relaxed text-navy/65">{s.desc}</p>
-              <ul className="mt-6 flex flex-wrap gap-2">
-                {s.points.map((p) => (
-                  <li
-                    key={p}
-                    className="rounded-full bg-cream px-3 py-1 text-xs text-navy/70"
-                  >
-                    {p}
-                  </li>
-                ))}
-              </ul>
             </motion.article>
           ))}
         </div>

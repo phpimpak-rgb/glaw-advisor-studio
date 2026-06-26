@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { contact } from "@/config/contact";
 
 const channels = [
-  { label: "LINE", value: contact.lineId, href: contact.lineUrl, cta: "เพิ่มเพื่อน" },
-  { label: "โทรศัพท์", value: contact.phoneDisplay, href: `tel:${contact.phone}`, cta: "โทรเลย" },
-  { label: "อีเมล", value: contact.email, href: `mailto:${contact.email}`, cta: "ส่งอีเมล" },
+  { label: "LINE", value: contact.lineId, href: contact.lineUrl },
+  { label: "โทรศัพท์", value: contact.phoneDisplay, href: `tel:${contact.phone}` },
+  { label: "อีเมล", value: contact.email, href: `mailto:${contact.email}` },
 ];
 
 export const Contact = () => {
@@ -39,8 +39,7 @@ export const Contact = () => {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="mt-5 text-4xl font-semibold leading-tight md:text-6xl"
         >
-          พร้อมเริ่มต้น<br className="md:hidden" />
-          <span className="text-gold"> วางแผนการเงิน</span> หรือยัง?
+          ติดต่อ<span className="text-gold">เกล้า</span>
         </motion.h2>
 
         <motion.p
@@ -50,11 +49,34 @@ export const Contact = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-cloud/70 md:text-lg"
         >
-          ปรึกษาฟรี ไม่มีค่าใช้จ่าย ไม่มีการขายแบบกดดัน
-          เกล้าจะรับฟังและออกแบบแผนที่เหมาะกับคุณจริง ๆ
+          สนใจวางแผน อยากเช็กความคุ้มครอง หรือมีคำถามเกี่ยวกับประกัน
+          ติดต่อเกล้าได้ทาง LINE โทรศัพท์ หรืออีเมล
         </motion.p>
 
-        <div className="mt-14 grid gap-4 md:grid-cols-3">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row"
+        >
+          <a
+            href={contact.lineUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold px-7 py-4 text-base font-medium text-navy shadow-soft transition hover:-translate-y-0.5 sm:w-auto"
+          >
+            คุยกับเกล้าทาง LINE <span aria-hidden>→</span>
+          </a>
+          <a
+            href={`tel:${contact.phone}`}
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-cloud/25 bg-cloud/5 px-7 py-4 text-base text-cloud backdrop-blur transition hover:border-gold sm:w-auto"
+          >
+            โทรหาเกล้า
+          </a>
+        </motion.div>
+
+        <div className="mt-14 grid gap-4 text-left md:grid-cols-3">
           {channels.map((c, i) => (
             <motion.a
               key={c.label}
@@ -65,20 +87,15 @@ export const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 * i }}
-              className="group rounded-3xl border border-cloud/15 bg-cloud/5 p-8 text-left backdrop-blur transition-all hover:-translate-y-1 hover:border-gold/60 hover:bg-cloud/10"
+              className="group rounded-3xl border border-cloud/15 bg-cloud/5 p-7 backdrop-blur transition-all hover:-translate-y-1 hover:border-gold/60 hover:bg-cloud/10"
             >
               <p className="text-xs uppercase tracking-widest text-cloud/60">{c.label}</p>
-              <p className="mt-3 text-lg font-medium text-cloud">{c.value}</p>
-              <p className="mt-6 inline-flex items-center gap-2 text-sm text-gold">
-                {c.cta}
-                <span className="transition-transform group-hover:translate-x-1">→</span>
+              <p className="mt-3 break-all text-lg font-medium text-cloud">{c.value}</p>
+              <p className="mt-5 inline-flex items-center gap-2 text-sm text-gold">
+                ติดต่อ <span className="transition-transform group-hover:translate-x-1">→</span>
               </p>
             </motion.a>
           ))}
-        </div>
-
-        <div className="mt-20 border-t border-cloud/10 pt-8 text-xs text-cloud/50">
-          © {new Date().getFullYear()} Klao · AIA Financial Advisor · เข้าใจ ใส่ใจ ไม่ทิ้ง ไม่หาย
         </div>
       </div>
     </section>
