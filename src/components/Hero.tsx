@@ -23,6 +23,7 @@ export const Hero = () => {
       <CloudScene />
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center px-6 pb-16 pt-32 md:px-10 md:pt-36 lg:flex-row lg:gap-12 lg:pt-28">
+
         {/* LEFT — copy */}
         <div className="flex w-full flex-col lg:w-[55%]">
           <motion.span
