@@ -58,9 +58,9 @@ export const Hero = () => {
             {...fadeUp(0.5)}
             className="mt-5 max-w-xl text-[15px] leading-relaxed text-navy/65 md:text-base"
           >
-            เข้าใจทุกมุมมอง ใส่ใจทุกความกังวล พร้อมให้คำปรึกษา
-            ไม่ทิ้ง ไม่หาย ทั้งเรื่องดีและเรื่องแย่เกี่ยวกับประกัน
+            เข้าใจทุกมุมมอง ใส่ใจทุกความกังวล พร้อมให้คำปรึกษาทุกเรื่องด้านประกัน
           </motion.p>
+
 
           <motion.div {...fadeUp(0.65)} className="mt-10 flex flex-wrap items-center gap-3">
             <a

@@ -5,9 +5,10 @@ export const contact = {
   phone: "+66971616592",
   phoneDisplay: "+66(0)97-161-6592",
   email: "ph.pimpak@gmail.com",
-  licenseNo: "703712",
+  licenseNo: "6801014251",
   fullNameEn: "Pimpak Phattharakitpaisan",
   fullNameTh: "พิมพ์พักตร์ ภัทรกิจไพศาล",
-  nickname: "เกล้า",
+  nickname: "GLAW",
   role: "ตัวแทนและที่ปรึกษาการเงิน AIA",
 };
+
