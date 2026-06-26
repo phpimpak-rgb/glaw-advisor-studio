@@ -142,7 +142,7 @@ export const Hero = () => {
                   <p className="mt-1 text-[11px] tracking-wider text-navy/60">AIA · FINANCIAL ADVISOR</p>
                 </div>
                 <span className="flex h-9 items-center gap-1.5 rounded-full bg-navy px-3 text-[11px] text-cloud">
-                  <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Available
+                  <span className="h-1.5 w-1.5 rounded-full bg-gold" /> พร้อมให้คำปรึกษา
                 </span>
               </div>
             </motion.div>
