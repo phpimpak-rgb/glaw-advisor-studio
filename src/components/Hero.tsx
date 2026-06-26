@@ -51,7 +51,7 @@ export const Hero = () => {
             {...fadeUp(0.4)}
             className="mt-7 max-w-xl text-lg leading-relaxed text-navy-soft md:text-xl"
           >
-            ราคาป้องกัน <span className="text-navy">ถูกกว่าราคาแก้ไขเสมอ</span>
+            เข้าใจทุกมุมมอง ใส่ใจทุกความกังวล พร้อมให้คำปรึกษาทุกเรื่องด้านประกัน
           </motion.p>
 
           <motion.p
