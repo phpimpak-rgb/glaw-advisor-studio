@@ -76,6 +76,16 @@ export const Contact = () => {
           </a>
         </motion.div>
 
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.35 }}
+          className="mt-5 text-sm text-cloud/60"
+        >
+          ใบอนุญาตตัวแทนประกันชีวิตเลขที่: 703712
+        </motion.p>
+
         <div className="mt-14 grid gap-4 text-left md:grid-cols-3">
           {channels.map((c, i) => (
             <motion.a
