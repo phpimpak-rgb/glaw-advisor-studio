@@ -59,12 +59,6 @@ export const Services = () => {
             >
               <div className="flex items-start justify-between">
                 <span className="text-sm font-medium tracking-widest text-gold">{s.no}</span>
-                <span
-                  aria-hidden
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-navy/15 text-navy/50 transition-all group-hover:border-gold group-hover:bg-gold group-hover:text-white"
-                >
-                  →
-                </span>
               </div>
               <h3 className="mt-6 text-2xl font-semibold text-navy md:text-[26px]">{s.title}</h3>
               <p className="mt-3 text-[15px] leading-relaxed text-navy/65">{s.desc}</p>
