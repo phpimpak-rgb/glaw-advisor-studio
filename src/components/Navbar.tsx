@@ -7,6 +7,7 @@ const links = [
   { label: "บริการ", href: "#services" },
   { label: "โปรไฟล์", href: "#about" },
   { label: "ขั้นตอน", href: "#process" },
+  { label: "เหมาะกับใคร", href: "#who-for" },
   { label: "ติดต่อ", href: "#contact" },
 ];
 
