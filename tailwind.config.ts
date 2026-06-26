@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Cormorant Garamond", "IBM Plex Sans Thai", "serif"],
-        sans: ["IBM Plex Sans Thai", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["Prompt", "IBM Plex Sans Thai", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["IBM Plex Sans Thai", "Prompt", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       colors: {
         cloud: "hsl(var(--cloud))",
