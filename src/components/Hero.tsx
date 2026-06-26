@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import portrait from "@/assets/klao-portrait.jpg";
 import { CloudScene } from "./CloudScene";
+import { contact } from "@/config/contact";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -36,13 +37,13 @@ export const Hero = () => {
 
           <motion.h1
             {...fadeUp(0.25)}
-            className="mt-8 font-display text-[2.5rem] leading-[1.08] text-navy md:text-6xl lg:text-[4.25rem]"
+            className="mt-8 font-display text-[2.5rem] font-semibold leading-[1.1] tracking-tight text-navy md:text-6xl lg:text-[4.25rem]"
           >
             หากไม่มีแผนการเงิน
             <br />
             เงินทุกก้อนที่หามาได้
             <br />
-            <span className="italic text-gradient-gold">คือความเสี่ยง</span>
+            <span className="text-gold">คือความเสี่ยง</span>
           </motion.h1>
 
           <motion.p
@@ -62,7 +63,9 @@ export const Hero = () => {
 
           <motion.div {...fadeUp(0.65)} className="mt-10 flex flex-wrap items-center gap-3">
             <a
-              href="https://line.me/"
+              href={contact.lineUrl}
+              target="_blank"
+              rel="noreferrer"
               className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-navy px-7 py-4 text-sm text-cloud shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-[0_30px_60px_-20px_hsl(var(--navy)/0.5)] md:text-base"
             >
               <span className="relative z-10">คุยกับเกล้าทาง LINE</span>
@@ -79,7 +82,7 @@ export const Hero = () => {
             </a>
 
             <a
-              href="tel:+66"
+              href={`tel:${contact.phone}`}
               className="inline-flex items-center gap-2 rounded-full border border-navy/15 bg-cloud/70 px-6 py-4 text-sm text-navy backdrop-blur transition hover:border-gold hover:bg-cloud md:text-base"
             >
               <span className="text-gold">☏</span> โทรหาเกล้า
