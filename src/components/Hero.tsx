@@ -25,7 +25,7 @@ export const Hero = () => {
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center px-6 pb-16 pt-32 md:px-10 md:pt-36 lg:flex-row lg:gap-12 lg:pt-28">
 
         {/* LEFT — copy */}
-        <div className="flex w-full flex-col lg:w-[55%]">
+        <div className="order-2 flex w-full flex-col lg:order-1 lg:w-[55%]">
           <motion.span
             {...fadeUp(0.1)}
             className="inline-flex w-fit items-center gap-2 rounded-full border border-navy/10 bg-cloud/60 px-4 py-1.5 text-xs tracking-wider text-navy/70 backdrop-blur"
@@ -102,7 +102,7 @@ export const Hero = () => {
         </div>
 
         {/* RIGHT — portrait */}
-        <div className="relative mt-16 flex w-full justify-center lg:mt-0 lg:w-[45%]">
+        <div className="order-1 relative mb-4 flex w-full justify-center lg:order-2 lg:mb-0 lg:mt-0 lg:w-[45%]">
           <motion.div
             initial={reduce ? false : { opacity: 0, y: 40, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -126,7 +126,7 @@ export const Hero = () => {
               className="relative overflow-hidden rounded-[2rem] bg-cream shadow-portrait"
             >
             <img
-              src={portraitAsset.url}
+              src={heroPortraitAsset.url}
               alt="เกล้า ที่ปรึกษาการเงินและประกันจาก AIA"
               width={896}
               height={1152}
