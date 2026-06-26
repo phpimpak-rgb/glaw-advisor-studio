@@ -22,7 +22,7 @@ export const About = () => {
             />
           </div>
           <div className="absolute -bottom-6 -right-4 hidden rounded-2xl bg-navy px-6 py-5 text-cloud shadow-soft md:block">
-            <p className="font-semibold">เกล้า · Klao</p>
+            <p className="font-semibold">เกล้า · Glaw</p>
             <p className="mt-1 text-xs tracking-wider text-cloud/70">AIA FINANCIAL ADVISOR</p>
           </div>
         </motion.div>
