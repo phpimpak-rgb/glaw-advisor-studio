@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
-import portrait from "@/assets/klao-portrait.jpg";
+import portraitAsset from "@/assets/klao-portrait.png.asset.json";
 import { CloudScene } from "./CloudScene";
 import { contact } from "@/config/contact";
 
@@ -124,14 +124,14 @@ export const Hero = () => {
               transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
               className="relative overflow-hidden rounded-[2rem] bg-cream shadow-portrait"
             >
-              <img
-                src={portrait}
-                alt="เกล้า ที่ปรึกษาการเงินและประกันจาก AIA"
-                width={896}
-                height={1152}
-                fetchPriority="high"
-                className="aspect-[4/5] h-auto w-full object-cover"
-              />
+            <img
+              src={portraitAsset.url}
+              alt="เกล้า ที่ปรึกษาการเงินและประกันจาก AIA"
+              width={896}
+              height={1152}
+              fetchPriority="high"
+              className="aspect-[4/5] h-auto w-full object-cover"
+            />
               {/* subtle gradient overlay */}
               <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-navy/25 to-transparent" />
 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import portrait from "@/assets/klao-portrait.jpg";
+import portraitAsset from "@/assets/klao-portrait.png.asset.json";
 
 const stats = [
   { value: "5+", label: "ปีในวงการประกัน" },
@@ -26,7 +26,7 @@ export const About = () => {
         >
           <div className="relative overflow-hidden rounded-[2rem] shadow-portrait">
             <img
-              src={portrait}
+              src={portraitAsset.url}
               alt="เกล้า ที่ปรึกษาการเงินและประกันจาก AIA"
               className="aspect-[4/5] w-full object-cover"
               loading="lazy"
