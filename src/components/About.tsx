@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import portrait from "@/assets/klao-portrait.jpg";
+import portraitAsset from "@/assets/klao-portrait.png.asset.json";
 
 const stats = [
   { value: "5+", label: "ปีในวงการประกัน" },
